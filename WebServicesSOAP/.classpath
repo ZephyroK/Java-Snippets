@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="D:/users/gdlrahue/Downloads/libs/jaxws-ri-2.2.8/jaxws-ri/lib/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="D:/users/gdlrahue/Downloads/libs/jaxws-ri-2.2.8/jaxws-ri/lib/jaxb-core.jar"/>
+	<classpathentry kind="lib" path="D:/users/gdlrahue/Downloads/libs/jaxws-ri-2.2.8/jaxws-ri/lib/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="D:/users/gdlrahue/Downloads/libs/jaxws-ri-2.2.8/jaxws-ri/lib/jaxb-jxc.jar"/>
+	<classpathentry kind="lib" path="D:/users/gdlrahue/Downloads/libs/jaxws-ri-2.2.8/jaxws-ri/lib/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="D:/users/gdlrahue/Downloads/libs/jaxws-ri-2.2.8/jaxws-ri/lib/stax2-api.jar"/>
+	<classpathentry kind="lib" path="D:/users/gdlrahue/Downloads/libs/jaxws-ri-2.2.8/jaxws-ri/lib/stax-ex.jar"/>
+	<classpathentry kind="lib" path="D:/users/gdlrahue/Downloads/libs/jaxws-ri-2.2.8/jaxws-ri/lib/gmbal-api-only.jar"/>
+	<classpathentry kind="lib" path="D:/users/gdlrahue/Downloads/libs/jaxws-ri-2.2.8/jaxws-ri/lib/jaxws-api.jar"/>
+	<classpathentry kind="lib" path="D:/users/gdlrahue/Downloads/libs/jaxws-ri-2.2.8/jaxws-ri/lib/jaxws-rt.jar"/>
+	<classpathentry kind="lib" path="D:/users/gdlrahue/Downloads/libs/jaxws-ri-2.2.8/jaxws-ri/lib/jaxws-tools.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
