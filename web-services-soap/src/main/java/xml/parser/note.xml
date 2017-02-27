@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<note
+xmlns="http://www.example.org/note"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.example.org/note note.xsd">
+  <to>Tove</to>
+  <from>Susan</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>

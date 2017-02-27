@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'eclipse-wtp'
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+	compile 'com.sun.jersey:jersey-core:1.19.3'
+	compile 'com.sun.jersey:jersey-client:1.19.3'
+	compile 'com.sun.jersey:jersey-bundle:1.19.3'
+	compile 'com.sun.xml.ws:jaxws-rt:2.2.10'
+	testCompile 'junit:junit:4.12'
+}
+
+eclipse {
+	wtp {
+		facet {
+			facet name: 'java', version: '1.8'
+		}
+	}
+}
