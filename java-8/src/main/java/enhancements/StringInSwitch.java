@@ -2,9 +2,19 @@ package enhancements;
 
 public class StringInSwitch {
 	public static void main(String[] args) {
-		String value = "while";
 		
 		// Use compile-time constant, literal or initialized final variable in case sentences
+		final int a = 1;
+		final int b;
+		b = 2;
+		int x = 0;
+		switch (x) {
+			case a: // ok
+			// case b: // compiler error
+		}
+
+
+		String value = "while";
 		final String whileStatement = "while";
 		
 		switch(value) {

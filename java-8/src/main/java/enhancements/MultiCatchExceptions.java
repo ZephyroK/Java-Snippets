@@ -7,17 +7,17 @@ public class MultiCatchExceptions {
 	public static void main(String[] args) {
 	    try {
 			FileReader reader = new FileReader("file.txt");
-		}
-		catch(Exception e) {
+	    }
+	    catch(Exception e) {
 		//catch(IOException | NullPointerException e) {
-			e.printStackTrace();
-			//e = new IOException(); // won't compile, error: multi-catch parameter e may not be assigned
-		}
-		/* 
-		 * Won't compile
-		 * catch(IOException e | NullPointerException e)
-		 * catch(IOException e1 | NullPointerException e2)
-		 */
+		e.printStackTrace();
+		//e = new IOException(); // won't compile, error: multi-catch parameter e may not be assigned
+	    }
+	    /* 
+	     * Won't compile
+	     * catch(IOException e | NullPointerException e)
+	     * catch(IOException e1 | NullPointerException e2)
+	     */
 	}
 	
 	public void couldThrowAnException() throws IOException, SQLException {}
@@ -27,7 +27,7 @@ public class MultiCatchExceptions {
 			couldThrowAnException();
 		}
 		//catch(IOException | SQLException e) {
-		catch(Exception e) { // Java 6 will fail with error: unreported exception
+		catch(Exception e) { // Java 6 will fail with error: unreported exception, any exception that the called methods happen to throw
 			throw e;
 		}
 	}

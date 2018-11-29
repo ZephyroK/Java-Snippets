@@ -4,6 +4,11 @@ import java.io.*;
 
 public class TryWithResources {
 	public static void main(String[] args) {
+		// This is legal code, finally is implicity added
+		try (CloseableResource resource = new CloseableResource()) {
+
+		}
+
 		try (Reader reader = new BufferedReader(new FileReader("file.txt"))) {
 			
 		}
