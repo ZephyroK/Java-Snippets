@@ -1,6 +1,9 @@
+package datetime;
+
 import java.time.*;
 import java.time.format.*;
 import java.time.temporal.*;
+import java.util.Locale;
 
 public class Eclipse {
     public static void main(String[] args) {
@@ -71,9 +74,37 @@ public class Eclipse {
 	LocalTime totalityBegins = beginsEclipse.plus(betweenDuration);
 	System.out.println("Totality begins, computed; " + totalityBegins);
 
-	ZonedDateTime totalityAustin =
-		ZonedDateTime.of(2024, 4, 8, 13, 35, 56, 0, ZoneId.of("US/Central"));
 	Instant totalityInstant = totalityAustin.toInstant();
 	System.out.println("Austin's eclipse instant is: " + totalityInstant);
+
+	Instant nowInstant = Instant.now(); // represents now
+	long minsBetween = ChronoUnit.MINUTES.between(nowInstant, totalityInstant);
+	Duration durationBetweenInstants = Duration.ofMinutes(minsBetween);
+	System.out.println("Minutes between " + minsBetween + ", is duration " + durationBetweenInstants);
+	System.out.println("Seconds since epoch: " + nowInstant.getEpochSecond());
+
+	// Another reminder 3 days before
+	System.out.println("DateTime of 3 day reminder: " + totalityAustin.minus(Period.ofDays(3)));
+	// What day of the week is that?
+	System.out.println("Day of week for 3 day reminder: " + totalityAustin.minus(Period.ofDays(3)).getDayOfWeek());
+
+	ZonedDateTime localParis = totalityAustin.withZoneSameInstant(ZoneId.of("Europe/Paris"));
+	System.out.println("Eclipse happens at " + localParis + " Paris time");
+	System.out.println("Phone sister ar 2 hours after totality: " + totalityAustin.plusHours(2) + ", " + 
+			localParis.plusHours(2) + " Paris time");
+
+	// compare two ZonedDateTimes (must be the same type)
+	System.out.println("Is the 2024 eclipse still in the future? " + ZonedDateTime.now().isBefore(totalityAustin));
+
+	System.out.println("Is 2024 a leap year? " + totalityAustin.toLocalDate().isLeapYear());
+
+	System.out.println("Totality date/time written for sister in Europe: " + 
+			totalityAustin.format(
+				DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm")));
+
+	System.out.println("Totality date/time in UK Locale: " + 
+			totalityAustin.format(
+				DateTimeFormatter.ofLocalizedDateTime(
+					FormatStyle.SHORT).withLocale(Locale.UK)));
     }
 }
